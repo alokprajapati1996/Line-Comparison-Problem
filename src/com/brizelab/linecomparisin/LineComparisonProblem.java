@@ -14,6 +14,13 @@ public class LineComparisonProblem {
             System.out.println("length1 and length2 are not equals");
         }
         }
+        public static void compareToMethod(int x1,int y1,int x2,int y2,int p1,int q1,int p2,int q2){
+            double length1= Math.sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+            double length2= Math.sqrt((p2-p1)*(p2-p1) + (q2-q1)*(q2-q1));
+            String s=String.valueOf(length1);
+            String s2=String.valueOf(length2);
+            System.out.println(s.compareTo(s2));
+        }
         public static void main(String[] args) {
             System.out.println("Enter line one coordinate");
             System.out.println("Enter x1-coordinate ");
@@ -36,6 +43,7 @@ public class LineComparisonProblem {
             int q2 = scan.nextInt();
 
             calculatelength(x1,y1,x2,y2,p1,q1,p2,q2);
+            compareToMethod(x1,y1,x2,y2,p1,q1,p2,q2);
 
 
         }
